@@ -8,15 +8,21 @@
 
 #include "InputSensorConfig.h"
 #include "vector"
+#include "OutputHandlerConfig.h"
+
 using namespace std;
 
 class SerreConfig {
 public:
     vector<InputSensorConfig*> inputSensorConfigs;
+    vector<OutputHandlerConfig*> outputHandlerConfigs;
     SerreConfig() {}
 
     void addInputSensorConfig(InputSensorConfig* inputSensorConfig) {
         this->inputSensorConfigs.push_back(inputSensorConfig);
+    }
+    void addOutputHandlerConfig(OutputHandlerConfig* outputHandlerConfig) {
+        this->outputHandlerConfigs.push_back(outputHandlerConfig);
     }
 };
 

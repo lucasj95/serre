@@ -25,7 +25,8 @@ public:
     };
 
     float getValue() {
-        return this->formatterFunction(analogRead(this->pin));
+        int rawData = analogRead(this->pin);
+        return this->formatterFunction(rawData);
     }
 };
 

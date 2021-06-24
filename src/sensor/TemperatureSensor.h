@@ -5,18 +5,21 @@
 #ifndef APP_SENSOR_TEMPERATURESENSOR_H
 #define APP_SENSOR_TEMPERATURESENSOR_H
 #include <model/InputSensorConfig.h>
+using namespace std;
 
+const string name = "Temperature";
+const int pin = 0;
+static float format(int input) {
+    return (float) input;
+}
 
 class TemperatureSensor {
 public:
     TemperatureSensor() {};
     static InputSensorConfig* createInputConfig() {
         float (*formatterFunction)(int);
-        formatterFunction = &TemperatureSensor().format;
-        return new InputSensorConfig("temperature", 0, formatterFunction);
-    }
-    static float format(int input) {
-        return (float) input;
+        formatterFunction = &format;
+        return new InputSensorConfig(name, pin, formatterFunction);
     }
 };
 
