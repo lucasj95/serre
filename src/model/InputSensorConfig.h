@@ -4,8 +4,8 @@
 // Created by lucas on 24/06/2021.
 //
 
-#ifndef UNTITLED_INPUTSENSORCONFIG_H
-#define UNTITLED_INPUTSENSORCONFIG_H
+#ifndef APP_MODEL_INPUTSENSORCONFIG_H
+#define APP_MODEL_INPUTSENSORCONFIG_H
 #include <string>
 #include <Arduino.h>
 using namespace std;
@@ -14,18 +14,20 @@ typedef float (*FormatterFunction)(int);
 
 class InputSensorConfig {
 public:
-    string a_name;
-    int a_pin;
-    float (*a_formatterFunction) (int);
+    string name;
+    int pin;
+    float (*formatterFunction) (int);
 
-    InputSensorConfig(string name, int pin, FormatterFunction &formatterFunction): a_name(std::move(name)), a_pin(pin) {
-        a_formatterFunction = formatterFunction;
+    InputSensorConfig(string name, int pin, FormatterFunction &formatterFunction) {
+        this->name = name;
+        this->pin = pin;
+        this->formatterFunction = formatterFunction;
     };
 
     float getValue() {
-        return a_formatterFunction(analogRead(a_pin));
+        return this->formatterFunction(analogRead(this->pin));
     }
 };
 
 
-#endif //UNTITLED_INPUTSENSORCONFIG_H
+#endif //APP_MODEL_INPUTSENSORCONFIG_H

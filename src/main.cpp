@@ -14,16 +14,18 @@ void setup() {
 
     serreConfig->addInputSensorConfig(TemperatureSensor().createInputConfig());
 
-    serre.a_config = *serreConfig;
+    serre.config = *serreConfig;
     delay(1000);
 }
 
 void loop() {
     Serial.print("loop");
-    Serial.print(serre.a_config.a_inputSensorConfigs.size());
-    Serial.print(serre.a_config.a_inputSensorConfigs[0]->a_name.c_str());
+    Serial.print("\n");
+
+    Serial.print(serre.config.inputSensorConfigs.size());
+    Serial.print(serre.config.inputSensorConfigs[0]->name.c_str());
     Serial.print(" ");
-    Serial.print(serre.a_config.a_inputSensorConfigs[0]->getValue());
+    Serial.print(serre.config.inputSensorConfigs[0]->getValue());
     Serial.print("\n");
     delay(1000);
 }
