@@ -5,7 +5,6 @@
 #ifndef APP_MODEL_SERRECONFIG_H
 #define APP_MODEL_SERRECONFIG_H
 
-
 #include "InputSensorConfig.h"
 #include "vector"
 #include "OutputHandlerConfig.h"

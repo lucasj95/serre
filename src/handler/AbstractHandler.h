@@ -33,5 +33,4 @@ public:
     }
 };
 
-
 #endif //APP_HANDLER_ABSTRACTHANDLER_H

@@ -30,17 +30,18 @@ void loop() {
     Serial.print(" ");
     Serial.print(serre.config.inputSensorConfigs[0]->getValue());
     Serial.print(" ");
-
-    Serial.print(serre.config.outputHandlerConfigs[0]->handler->state.c_str());
-    Serial.print(" ");
-
-    Serial.print(serre.config.outputHandlerConfigs[0]->handler->isStateHigh());
-    Serial.print(serre.config.outputHandlerConfigs[0]->handler->getState().c_str());
-    if (serre.config.outputHandlerConfigs[0]->handler->isStateHigh()) {
+    if (serre.config.inputSensorConfigs[0]->getValue() > 3000) {
+        serre.config.outputHandlerConfigs[0]->handler->start();
+    } else {
+        serre.config.outputHandlerConfigs[0]->handler->stop();
+    }
+/*    if (serre.config.outputHandlerConfigs[0]->handler->isStateHigh()) {
         serre.config.outputHandlerConfigs[0]->handler->stop();
     } else {
         serre.config.outputHandlerConfigs[0]->handler->start();
-    }
+    }*/
+    Serial.print(serre.config.outputHandlerConfigs[0]->handler->getState().c_str());
+
     Serial.print("\n");
     delay(1000);
 }

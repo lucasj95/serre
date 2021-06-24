@@ -27,12 +27,9 @@ public:
         return new OutputHandlerConfig(new ResistanceHandler());
     }
     void start() {
-        Serial.print("enfant");
-
         digitalWrite(this->pin, HIGH);
         this->startAt = clock();
         this->state = AbstractHandler::STATE_HIGH;
-        Serial.print(this->state.c_str());
     }
     void stop() {
         digitalWrite(this->pin, LOW);

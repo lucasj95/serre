@@ -3,3 +3,6 @@
 //
 
 #include "SerreConfig.h"
+#include "InputSensorConfig.h"
+#include "vector"
+#include "OutputHandlerConfig.h"
