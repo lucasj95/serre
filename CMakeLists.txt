@@ -30,4 +30,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/model/SerreModel.cpp src/model/SerreModel.h src/model/SerreConfigModel.cpp src/model/SerreConfigModel.h src/model/InputConfigModel.cpp src/model/InputConfigModel.h src/model/Serre.cpp src/model/Serre.h src/model/SerreConfig.cpp src/model/SerreConfig.h src/model/InputSensorConfig.cpp src/model/InputSensorConfig.h src/sensor/Temperature.cpp src/sensor/Temperature.h)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/model/SerreModel.cpp src/model/SerreModel.h src/model/SerreConfigModel.cpp src/model/SerreConfigModel.h src/model/InputConfigModel.cpp src/model/InputConfigModel.h src/model/Serre.cpp src/model/Serre.h src/model/SerreConfig.cpp src/model/SerreConfig.h src/model/InputSensorConfig.cpp src/model/InputSensorConfig.h src/sensor/TemperatureSensor.cpp src/sensor/TemperatureSensor.h)

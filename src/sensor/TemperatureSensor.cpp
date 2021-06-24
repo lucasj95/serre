@@ -2,4 +2,4 @@
 // Created by lucas on 24/06/2021.
 //
 
-#include "Temperature.h"
+#include "TemperatureSensor.h"

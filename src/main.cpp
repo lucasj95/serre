@@ -1,8 +1,7 @@
 #include <Arduino.h>
 #include <model/Serre.h>
 #include <model/SerreConfig.h>
-#include <model/InputSensorConfig.h>
-#include <sensor/Temperature.h>
+#include <sensor/TemperatureSensor.h>
 
 using namespace std;
 
@@ -13,9 +12,7 @@ void setup() {
     Serial.print("init");
     auto serreConfig = new SerreConfig();
 
-    float (*formatterFunction)(int);
-    formatterFunction = &Temperature().format;
-    serreConfig->addInputSensorConfig(new InputSensorConfig("temperature", 0, formatterFunction));
+    serreConfig->addInputSensorConfig(TemperatureSensor().createInputConfig());
 
     serre.a_config = *serreConfig;
     delay(1000);
