@@ -39,7 +39,7 @@ public:
         this->stopAt = clock();
         this->state = AbstractHandler::STATE_LOW;
     }
-    virtual bool isStateHigh()
+    bool isStateHigh()
     {
         return this->getState() == STATE_HIGH;
     }
