@@ -1,8 +1,8 @@
+#include "model/Serre.h"
+#include "model/SerreConfig.h"
+#include "sensor/TemperatureSensor.h"
+#include "handler/ResistanceHandler.h"
 #include <Arduino.h>
-#include <model/Serre.h>
-#include <model/SerreConfig.h>
-#include <sensor/TemperatureSensor.h>
-#include <handler/ResistanceHandler.h>
 
 using namespace std;
 
@@ -18,7 +18,7 @@ void setup() {
 
     serre.config = *serreConfig;
     delay(1000);
-    serre.state = Serre().SERRE_SATE_RUNNING;
+    serre.state = Serre().SERRE_STATE_RUNNING;
 }
 
 void loop() {

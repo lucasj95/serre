@@ -4,7 +4,9 @@
 
 #ifndef APP_SENSOR_TEMPERATURESENSOR_H
 #define APP_SENSOR_TEMPERATURESENSOR_H
-#include <model/InputSensorConfig.h>
+#include <string>
+#include "../model/InputSensorConfig.h"
+
 using namespace std;
 
 const string name = "Temperature";

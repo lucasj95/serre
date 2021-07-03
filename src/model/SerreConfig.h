@@ -13,9 +13,9 @@ using namespace std;
 
 class SerreConfig {
 public:
+    SerreConfig() {};
     vector<InputSensorConfig*> inputSensorConfigs;
     vector<OutputHandlerConfig*> outputHandlerConfigs;
-    SerreConfig() {}
 
     void addInputSensorConfig(InputSensorConfig* inputSensorConfig) {
         this->inputSensorConfigs.push_back(inputSensorConfig);

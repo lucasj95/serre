@@ -4,6 +4,7 @@
 
 #ifndef APP_HANDLER_ABSTRACTHANDLER_H
 #define APP_HANDLER_ABSTRACTHANDLER_H
+
 #include <string>
 #include <Arduino.h>
 
@@ -17,17 +18,19 @@ public:
     string name;
     int pin;
     string state = "default";
+
     virtual void start() {};
+
     virtual void stop() {};
 
-    virtual bool isStateHigh()
-    {
+    virtual bool isStateHigh() {
         return this->getState() == STATE_HIGH;
     }
-    virtual bool isStateLow()
-    {
+
+    virtual bool isStateLow() {
         return this->getState() == STATE_LOW;
     }
+
     virtual string getState() {
         return this->state;
     }
