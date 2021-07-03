@@ -6,8 +6,9 @@
 
 #ifndef APP_MODEL_INPUTSENSORCONFIG_H
 #define APP_MODEL_INPUTSENSORCONFIG_H
-#include <string>
 #include <Arduino.h>
+#include <string>
+
 using namespace std;
 
 typedef float (*FormatterFunction)(int);

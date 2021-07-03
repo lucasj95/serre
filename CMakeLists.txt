@@ -10,7 +10,7 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_C_COMPILER_WORKS 1)
 set(CMAKE_CXX_COMPILER_WORKS 1)
 
-project("untitled" C CXX)
+project("serre" C CXX)
 
 include(CMakeListsPrivate.txt)
 
@@ -30,4 +30,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/model/SerreModel.cpp src/model/SerreModel.h src/model/SerreConfigModel.cpp src/model/SerreConfigModel.h src/model/InputConfigModel.cpp src/model/InputConfigModel.h src/model/Serre.cpp src/model/Serre.h src/model/SerreConfig.cpp src/model/SerreConfig.h src/model/InputSensorConfig.cpp src/model/InputSensorConfig.h src/sensor/TemperatureSensor.cpp src/sensor/TemperatureSensor.h src/handler/ResistanceHandler.cpp src/handler/ResistanceHandler.h src/model/OutputHandlerConfig.cpp src/model/OutputHandlerConfig.h src/handler/AbstractHandler.cpp src/handler/AbstractHandler.h)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST})

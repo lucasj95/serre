@@ -1,8 +1,8 @@
+#include "model/Serre.h"
+#include "model/SerreConfig.h"
+#include "sensor/TemperatureSensor.h"
+#include "handler/ResistanceHandler.h"
 #include <Arduino.h>
-#include <model/Serre.h>
-#include <model/SerreConfig.h>
-#include <sensor/TemperatureSensor.h>
-#include <handler/ResistanceHandler.h>
 
 using namespace std;
 

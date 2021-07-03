@@ -13,7 +13,6 @@ public:
     const string SERRE_SATE_RUNNING = "running";
     string state = SERRE_SATE_INITIALIZATION;
     SerreConfig config;
-    Serre() {};
 };
 
 #endif //APP_MODEL_SERRE_H
